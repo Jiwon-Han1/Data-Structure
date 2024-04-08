@@ -19,6 +19,7 @@ Instead of List, which requires the change of indices after dequeuing,
 one can use Python's collections.deque for efficient queue operations.
 
 '''
+
 from collections import deque
 
 class Queue:
@@ -48,7 +49,6 @@ class Queue:
             print("Queue is empty!\n")
 
     def front(self, verbose=True):
-        print('???: '+str(self.size())    ####### empty일 때 왜 안돼!!!!!!!!!!
         if self.size() != 0:
             print("Front: "+str(self.items[0])+"\n" if verbose==True else "") 
             return self.items[0]
@@ -69,7 +69,6 @@ class Queue:
 if __name__ == "main__":
     Q = Queue()
     Q.isEmpty()
-    Q.front
     
     Q.enqueue(1)
     Q.enqueue(2)
